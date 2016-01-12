@@ -11,5 +11,9 @@ setup(
         description='oneir-service',
         author='Fabian van der Werf',
         author_email='fvanderwerf@gmail.com',
-        py_modules=['oneir-service']
+        py_modules=['oneir'],
+        scripts=['bin/oneird'],
+        install_requires=[
+                "Flask==0.10.1"
+            ]
         )

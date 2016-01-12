@@ -1,0 +1,5 @@
+#!/usr/bin/python
+
+import oneir
+
+oneir.service.run()
