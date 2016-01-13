@@ -2,4 +2,4 @@
 
 import oneir
 
-oneir.service.run()
+oneir.service.run(host='0.0.0.0', port=8080)
