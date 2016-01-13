@@ -3,7 +3,7 @@ from flask import Flask, request
 
 service = Flask("oneir-service")
 
-@service.route("api/v1/oneir/config", methods=["GET"])
+@service.route("/api/v1/oneir/config", methods=["GET"])
 def get_config():
     return flask.jsonify(**{})
 
