@@ -7,7 +7,7 @@ import pika
 
 credentials = pika.PlainCredentials('guest', 'guest')
 parameters = pika.ConnectionParameters(
-        '172.17.0.7'
+        '172.17.0.7',
         5672,
         '/',
         credentials)
