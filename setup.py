@@ -14,6 +14,7 @@ setup(
         py_modules=['oneir'],
         scripts=['bin/oneird'],
         install_requires=[
-                "Flask==0.10.1"
+                "Flask==0.10.1",
+                "pika==0.10.0"
             ]
         )
