@@ -2,6 +2,7 @@
 from flask import Flask, request
 from flask.ext.cors import CORS
 import pika
+import json
 
 
 # Create our connection object, passing in the on_open method
@@ -27,9 +28,9 @@ def get_config():
 
 @service.route("/api/v1/oneir/command", methods=["POST"])
 def oneir_command():
-    json = request.get_json()
-    if "command" in json:
-        channel.basic_publish(exchange='', routing_key='oneir', body=json["command"])
+    data = request.get_json()
+    if "command" in data:
+        channel.basic_publish(exchange='', routing_key='oneir', body=json.dumps(data["command"]))
     
     return ('', 204)
 
