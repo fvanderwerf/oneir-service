@@ -1,5 +1,6 @@
 
 from flask import Flask, request
+from flask.ext.cors import CORS
 import pika
 
 
@@ -17,6 +18,7 @@ channel = pikaconn.channel()
 channel.queue_declare(queue='oneir')
 
 service = Flask("oneir-service")
+CORS(service)
 
 @service.route("/api/v1/oneir/config", methods=["GET"])
 def get_config():
