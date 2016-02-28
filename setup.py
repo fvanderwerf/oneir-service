@@ -15,6 +15,7 @@ setup(
         scripts=['bin/oneird'],
         install_requires=[
                 "Flask==0.10.1",
-                "pika==0.10.0"
+                "pika==0.10.0",
+                "Flask-Cors==2.1.2"
             ]
         )
